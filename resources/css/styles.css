@@ -1,0 +1,145 @@
+
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #2980b9;
+  --accent-color: #d35400;
+  --bg-light: #e0e2e5;
+  --bg-secondary-light: #bdc3c7;
+  --text-color: #2c3e50;
+  --link-hover-color: #16a085;
+  --button-radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Figtree', sans-serif;
+}
+
+body {
+  background: var(--bg-light);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: var(--bg-secondary-light);
+  border-bottom: 1px solid #aab7c4;
+}
+
+header .max-w-7xl {
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Center the navigation */
+header nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2rem;
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--accent-color);
+  padding: 0.5rem 0;
+  transition: color 0.3s;
+  font-weight: 600;
+  font-size: 1rem;
+  position: relative;
+}
+
+header nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--accent-color);
+  transition: width 0.3s;
+}
+
+header nav a:hover {
+  color: var(--secondary-color);
+}
+
+header nav a:hover::after {
+  width: 100%;
+}
+
+/* Position auth buttons top-right */
+.auth-buttons {
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 1rem;
+}
+
+.auth-buttons a.btn {
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--button-radius);
+  border: 1px solid var(--secondary-color);
+  background: transparent;
+  color: var(--secondary-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+.auth-buttons a.btn:hover {
+  background: var(--secondary-color);
+  color: white;
+}
+
+.auth-buttons a.btn-accent {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.auth-buttons a.btn-accent:hover {
+  background: var(--accent-color);
+  color: white;
+}
+
+main {
+  display: flex;
+  flex: 1;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.sidebar {
+  width: 20%;
+  background: white;
+  padding: 1rem;
+  border-radius: 4px; /* minimal rounding */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.content {
+  flex: 1;
+  background: white;
+  padding: 2rem;
+  border-radius: 4px; /* minimal rounding */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  background: var(--bg-secondary-light);
+  color: var(--text-color);
+  border-top: 1px solid #aab7c4;
+}
