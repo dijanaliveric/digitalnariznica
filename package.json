@@ -3,6 +3,7 @@
     "private": true,
     "type": "module",
     "scripts": {
+        "prebuild": "rm -rf docs",
         "build": "vite build",
         "dev": "vite",
         "preview": "vite preview"
