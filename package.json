@@ -4,7 +4,8 @@
     "type": "module",
     "scripts": {
         "build": "vite build",
-        "dev": "vite"
+        "dev": "vite",
+        "preview": "vite preview"
     },
     "devDependencies": {
         "@tailwindcss/forms": "^0.5.2",
@@ -21,11 +22,10 @@
     },
     "dependencies": {
         "@tailwindcss/typography": "^0.5.16"
-    },
+    }
 
-    "homepage": "https://<tvoj‑user>.github.io/<tvoj‑repo>",
-"scripts": {
-   "deploy": "gh-pages -d public"
-}
 
 }
+
+
+
